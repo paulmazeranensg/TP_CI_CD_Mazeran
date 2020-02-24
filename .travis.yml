@@ -5,7 +5,7 @@ jdk:
   - openjdk13
 jobs:
   include:
-    - stage: test
+    - stage: IntegrationTest
       script: ./src/test/java/com/example/helloworld/IntegrationTest.java
     - # stage name not required, will continue to use `test`
      # script: ./test 2
