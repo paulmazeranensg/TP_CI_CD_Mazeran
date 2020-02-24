@@ -3,7 +3,8 @@ jdk:
 #  - openjdk8
  # - openjdk11
   #- openjdk13
-
+before_install:
+    - chmod +x src/test/java/com/example/helloworld/
 jobs:
   include:
   
@@ -11,7 +12,6 @@ jobs:
       script: ./src/test/resources/test-example.yml
       script: ./src/test/java/com/example/helloworld/IntegrationTest.java
       
-      before_install:
-        - chmod +x src/test/java/com/example/helloworld/
+
     - stage: deploy
       script: ./deploy
