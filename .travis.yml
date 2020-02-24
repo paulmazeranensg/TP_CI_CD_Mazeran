@@ -5,6 +5,7 @@ jdk:
   #- openjdk13
 before_install:
     - chmod +x src/test/java/com/example/helloworld
+    - ulimit -c unlimited -S
 jobs:
   include:
   
