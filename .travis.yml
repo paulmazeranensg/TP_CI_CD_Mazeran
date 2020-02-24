@@ -6,8 +6,11 @@ jdk:
 
 jobs:
   include:
+  
     - stage: IntegrationTest
       script: ./src/test/java/com/example/helloworld/IntegrationTest.java
+      before_install:
+        - chmod +x src/test/java/com/example/helloworld/IntegrationTest.java
     - # stage name not required, will continue to use `test`
      # script: ./test 2
     - stage: deploy
