@@ -12,6 +12,6 @@ jobs:
       script: ./src/test/java/com/example/helloworld/IntegrationTest.java
       
       before_install:
-        - chmod +x src/test/java/com/example/helloworld/IntegrationTest.java
+        - chmod +x src/test/java/com/example/helloworld/
     - stage: deploy
       script: ./deploy
