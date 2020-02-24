@@ -4,7 +4,7 @@ jdk:
  # - openjdk11
   #- openjdk13
 before_install:
-    - chmod +x src/test/java/com/example/helloworld/
+    - chmod +x src/test/java/com/example/helloworld
 jobs:
   include:
   
