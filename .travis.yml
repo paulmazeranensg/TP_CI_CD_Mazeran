@@ -9,20 +9,12 @@ before_install:
 
 jobs:
   include:
-    - script: ./integration-tests
+    - script: ./src/test/java/com/example/helloworld/IntegrationTest.java
       name: "Integration Tests"     # names the second Tests stage job
     - stage: deploy
-      name: "Deploy to GCP"
-      script: ./deploy
-jobs:
-  include:
-    - script: ./test 1 # uses the default stage name "test"
-    - script: ./test 2
-    - stage: deploy
-      script: skip     # usually you do not want to rerun any tests
-      deploy: &heroku
-        provider: script
-        skip_cleanup: true
+      name: "Deploy to"
+      provider: script
+      skip_cleanup: true
       script: bash ci/deploy-snapshot.sh
       on:
         repo: paulmazeranensg /TP_CI_CD_Mazeran
@@ -36,6 +28,7 @@ jobs:
         repo:  paulmazeranensg /TP_CI_CD_Mazeran 
         tags: true
         jdk: openjdk8
+     
 #jobs:
 #  include:
 #    - stage: deploy
