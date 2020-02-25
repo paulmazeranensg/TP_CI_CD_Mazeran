@@ -10,26 +10,26 @@ before_install:
     - ulimit -c unlimited -S
 jobs:
   include:
+    - script: mvn build
+      name: "Build"
     - script: mvn test
-      before_install:
-        - chmod +x src/test/java/com/example/helloworld/IntegrationTest.java
       name: "Integration Tests"     # names the second Tests stage job
-    - stage: deploy
-      name: "Deploy to"
-      script: skip
-      deploy: &heroku
+      
+     - script: skip
+       name: "Deploy"     # names the second Tests stage job
+       deploy: &heroku
         provider: script
         skip_cleanup: true
-      script: bash ci/deploy-snapshot.sh
-      on:
+       script: bash ci/deploy-snapshot.sh
+       on:
         repo: paulmazeranensg /TP_CI_CD_Mazeran
         tags: false
         branch: master
         jdk: openjdk8
-      provider: script
-      skip_cleanup: true
-      script: bash ci/deploy-release.sh
-      on:
+       provider: script
+       skip_cleanup: true
+       script: bash ci/deploy-release.sh
+       on:
         repo:  paulmazeranensg /TP_CI_CD_Mazeran 
         tags: true
         jdk: openjdk8
