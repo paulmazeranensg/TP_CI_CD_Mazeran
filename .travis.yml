@@ -5,28 +5,29 @@ jdk:
   - openjdk13
 before_install:
     - chmod +x src/test/java/com/example/helloworld
-    - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-    - mvn test -B
-    
-
-
-    
-deploy:
-  - provider: script
-    skip_cleanup: true
-    script: bash ci/deploy-snapshot.sh
-    on:
-      repo: paulmazeranensg /TP_CI_CD_Mazeran
-      tags: false
-      branch: master
-      jdk: openjdk8
-  - provider: script
-    skip_cleanup: true
-    script: bash ci/deploy-release.sh
-    on:
-      repo:  paulmazeranensg /TP_CI_CD_Mazeran 
-      tags: true
-      jdk: openjdk8
+#    - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+jobs:
+  include:
+    - script: ./test 1 # uses the default stage name "test"
+    - script: ./test 2
+    - stage: deploy
+      script: skip     # usually you do not want to rerun any tests
+      deploy: &heroku
+        provider: script
+        skip_cleanup: true
+      script: bash ci/deploy-snapshot.sh
+      on:
+        repo: paulmazeranensg /TP_CI_CD_Mazeran
+        tags: false
+        branch: master
+        jdk: openjdk8
+      provider: script
+      skip_cleanup: true
+      script: bash ci/deploy-release.sh
+      on:
+        repo:  paulmazeranensg /TP_CI_CD_Mazeran 
+        tags: true
+        jdk: openjdk8
 #jobs:
 #  include:
 #    - stage: deploy
