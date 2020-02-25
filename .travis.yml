@@ -12,7 +12,7 @@ jobs:
   include:
     - script: ./src/test/java/com/example/helloworld/IntegrationTest.java
       before_install:
-        - chmod +x src/test/java/com/example/helloworld
+        - chmod +x src/test/java/com/example/helloworld/IntegrationTest.java
       name: "Integration Tests"     # names the second Tests stage job
     - stage: deploy
       name: "Deploy to"
