@@ -6,15 +6,16 @@ jdk:
 before_install:
     - chmod +x src/test/java/com/example/helloworld
 #    - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-
 jobs:
   include:
     - script: ./src/test/java/com/example/helloworld/IntegrationTest.java
       name: "Integration Tests"     # names the second Tests stage job
     - stage: deploy
       name: "Deploy to"
-      provider: script
-      skip_cleanup: true
+      script: skip
+      deploy: &heroku
+        provider: script
+        skip_cleanup: true
       script: bash ci/deploy-snapshot.sh
       on:
         repo: paulmazeranensg /TP_CI_CD_Mazeran
