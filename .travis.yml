@@ -6,6 +6,10 @@ jdk:
 before_install:
     - chmod +x src/test/java/com/example/helloworld
     
+    
+    
+
+    
 deploy:
   - provider: script
     skip_cleanup: true
