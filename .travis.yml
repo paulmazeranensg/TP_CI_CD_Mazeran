@@ -4,6 +4,7 @@ jdk:
  # - openjdk11
   #- openjdk13
 before_install:
+
     - chmod +x src/test/java/com/example/helloworld
 jobs:
   include:
@@ -16,3 +17,9 @@ jobs:
 
     - stage: deploy
       script: ./deploy
+
+
+#Faire en ligne commande :    
+#- gem install travis
+#- travis encrypt SOMEVAR="secretvalue"
+#puis ajouter la ligne secure
