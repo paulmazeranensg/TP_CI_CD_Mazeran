@@ -10,7 +10,7 @@ before_install:
     - ulimit -c unlimited -S
 jobs:
   include:
-    - script: ./src/test/java/com/example/helloworld/IntegrationTest.java
+    - script: mvn test
       before_install:
         - chmod +x src/test/java/com/example/helloworld/IntegrationTest.java
       name: "Integration Tests"     # names the second Tests stage job
