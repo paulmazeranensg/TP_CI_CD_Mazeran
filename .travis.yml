@@ -10,11 +10,14 @@ before_install:
     - ulimit -c unlimited -S
 jobs:
   include:
-    - script: mvn package
+    - stage: build
+      script: mvn package
       name: "Build"
-    - script: mvn site
+    - stage: documentation
+      script: mvn site
       name: "site"
-    - script: mvn test
+    - stage: test
+      script: mvn test
       name: "Integration Tests"    
     #- script: mvn deploy
      #  name: "Deploy"         
