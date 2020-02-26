@@ -16,10 +16,10 @@ stages:
 jobs:
   include:
     - stage: build
-      script: mvn package
-      name: "Build"
-      script: mvn site
-      name: "site"
+      - script: mvn package
+        name: "Build"
+      - script: mvn site
+        name: "site"
     - stage: test
       script: mvn test
       name: "Integration Tests" 
