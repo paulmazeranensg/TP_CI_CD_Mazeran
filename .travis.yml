@@ -12,13 +12,12 @@ stages:
   - build
   - test
   - deploy
-  - documentation
+
 jobs:
   include:
     - stage: build
       script: mvn package
       name: "Build"
-    - stage: documentation
       script: mvn site
       name: "site"
     - stage: test
