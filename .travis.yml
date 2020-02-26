@@ -12,8 +12,8 @@ jobs:
   include:
     - script: mvn package
       name: "Build"
-#    - script: mvn site
- #     name: "site"
+    - script: mvn site
+      name: "site"
   #  - script: mvn test
    #   name: "Integration Tests"    
     #- script: mvn deploy
