@@ -14,8 +14,8 @@ jobs:
       name: "Build"
     - script: mvn site
       name: "site"
-  #  - script: mvn test
-   #   name: "Integration Tests"    
+    - script: mvn test
+      name: "Integration Tests"    
     #- script: mvn deploy
      #  name: "Deploy"         
 env:
