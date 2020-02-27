@@ -23,7 +23,7 @@ jobs:
       after_success:
         - git checkout -b gh-pages
         - git add . 
-        - git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
+        - git commit -m "documentation"
         - git remote add origin-pages https://${59825589046d4fb5a994c0e862024006a8bb2cee}@github.com/paulmazeranensg/TP_CI_CD_Mazeran.git
         - git push --quiet --set-upstream origin-pages gh-pages
       name: "site"
