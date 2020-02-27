@@ -1,7 +1,6 @@
-# Introduction
+# Evaluation des compétences CI/CD
 
-The Dropwizard example application was developed to, as its name implies, provide examples of some of the features
-present in Dropwizard.
+L’objet de ce travail pratique est de mettre en oeuvre de la livraison continue (“CD”) sur le projet suivant : 
 
 # Overview
 
