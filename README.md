@@ -1,6 +1,7 @@
 # Evaluation des compétences CI/CD
 
 L’objet de ce travail pratique est de mettre en oeuvre de la livraison continue (“CD”) sur le projet suivant : 
+https://github.com/dropwizard/dropwizard/tree/master/dropwizard-example
 
 # Overview
 
