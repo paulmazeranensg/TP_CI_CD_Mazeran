@@ -3,7 +3,7 @@
  L’objet de ce travail pratique est de mettre en oeuvre de la livraison continue (“CD”) sur le projet suivant : 
 https://github.com/dropwizard/dropwizard/tree/master/dropwizard-example.
 
-# Outil d'IC : Travic IC
+## Outil d'IC : Travic IC
 
 Pour mon projet, j'ai choisi d'utilisé le système d'integration continue libre le plus utilisé et ai donc choisi "Travis IC". 
 
