@@ -15,16 +15,16 @@ stages:
 jobs:
   include:
     - stage: Construire
-      script: mvn package
       name: "Build"
+      script: mvn package
       script: mvn site
-      script : git config --global user.email "mazeran.paul@gmail.com"
-      script : git config --global user.name "paulmazeranensg"
-      script : git checkout -b gh-pages
-      script : git add . 
-      script : git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
-      script : git remote add origin-pages https://${59825589046d4fb5a994c0e862024006a8bb2cee}@github.com/paulmazeranensg/TP_CI_CD_Mazeran.git
-      script : git push --quiet --set-upstream origin-pages gh-pages
+      script: git config --global user.email "mazeran.paul@gmail.com"
+      script: git config --global user.name "paulmazeranensg"
+      script: git checkout -b gh-pages
+      script: git add . 
+      script: git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
+      script: git remote add origin-pages https://${59825589046d4fb5a994c0e862024006a8bb2cee}@github.com/paulmazeranensg/TP_CI_CD_Mazeran.git
+      script: git push --quiet --set-upstream origin-pages gh-pages
       name: "site"
     - stage: Test
       jdk: openjdk8
