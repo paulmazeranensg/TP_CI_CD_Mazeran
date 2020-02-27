@@ -18,7 +18,7 @@ jobs:
       name: "Build"
       script: mvn site
       after_success:
-        - .travis/push.sh
+        - ./push.sh
       name: "site"
     - stage: Test
       jdk: openjdk8
