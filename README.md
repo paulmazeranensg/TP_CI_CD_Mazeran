@@ -21,6 +21,8 @@ Comme demandé dans le sujet, le pipeline est composé des étapes : Construire,
 ![40% center](pipelone.png)
 
 
+Le pipeline est accessible via le lien suivant : https://travis-ci.org/paulmazeranensg/TP_CI_CD_Mazeran.
+
 
 # Générer la documentation maven site
 
