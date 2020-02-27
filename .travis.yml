@@ -9,7 +9,7 @@ before_install:
     - ulimit -c unlimited -S
 stages:
   - Construire
-  - test
+  - Test
   - Deployer
 jobs:
   include:
@@ -18,12 +18,12 @@ jobs:
       name: "Build"
     - script: mvn site
       name: "site"
-    - stage: test
-      image: maven:3-jdk-8
+    - stage: Test
+      jdk: openjdk8
       script: mvn test
       name: "Integration Tests jdk8" 
-    - stage: test
-      image: maven:3-jdk-13
+    - stage: Test
+      jdk: openjdk13
       script: mvn test
       name: "Integration Tests jdk13" 
     - stage: Deployer
