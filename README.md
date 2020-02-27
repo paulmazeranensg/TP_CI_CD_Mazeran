@@ -5,11 +5,13 @@ https://github.com/dropwizard/dropwizard/tree/master/dropwizard-example.
 
 # Outil d'IC : Travic IC
 
-Pour mon projet, j'ai choisi d'utilisé le système d'integration continue libre le plus utilisé et ai donc choisi "Travis IC"
+Pour mon projet, j'ai choisi d'utilisé le système d'integration continue libre le plus utilisé et ai donc choisi "Travis IC". 
 
 # Le pipeline
 
-* The `PersonDAO` illustrates using the Data Access Object pattern with assisting of Hibernate.
+Comme demandé dans le sujet, le pipeline est composé des étapes : Construire, Test, et Deployer.
+
+* Construire : cette étage effectue la ligne de commande "mvn build"
 
 * The `Person` illustrates mapping of Java classes to database tables with assisting of JPA annotations.
 
