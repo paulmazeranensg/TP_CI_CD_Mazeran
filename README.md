@@ -18,7 +18,7 @@ Comme demandé dans le sujet, le pipeline est composé des étapes : Construire,
 * Deployer : cette étape effectue ligne de commande "mvn deploy".
 
 
-![40% center](pipeline.png)
+![40% center](pipelone.png)
 
 
 
