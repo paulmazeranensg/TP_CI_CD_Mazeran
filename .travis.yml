@@ -8,20 +8,20 @@ before_install:
     - rm ~/.m2/settings.xml || true
     - ulimit -c unlimited -S
 stages:
-  - build
-  - test
-  - deploy
+  - Construire
+  - Tests
+  - Deployer
 jobs:
   include:
-    - stage: build
+    - stage: Construire
       script: mvn package
       name: "Build"
     - script: mvn site
       name: "site"
-    - stage: test
+    - stage: Tests
       script: mvn test
       name: "Integration Tests" 
-    - stage: deploy
+    - stage: Deployer
       script: mvn deploy
       name: "Deploy"         
 env:
