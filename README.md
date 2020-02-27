@@ -24,11 +24,14 @@ Comme demandé dans le sujet, le pipeline est composé des étapes : Construire,
 
 # Générer la documentation maven site
 
-java -jar target/dropwizard-example-$DW_VERSION.jar server exampl
+Afin de générer le maven site, j'utilise la commande "mvs site". j'ai tenté de pousser les document généré par la commande sur la branche master en utilisant le code suivant : https://gist.github.com/willprice/e07efd73fb7f13f917ea.
+
+Le seule problème étant : le projet étant public, github supprime les token que je créé car leur ecriture en clair entraine des faille de sécurité.
 
 
 # Générer une clée Trevic IC pour le projet github
 
+Afin que Travis IC ai les droits sur le projet git hub, il faut ajouter dans le fichier travis.yml une clée de sécurité.
 
 
 
