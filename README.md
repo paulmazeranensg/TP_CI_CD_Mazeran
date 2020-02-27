@@ -37,8 +37,8 @@ Le seule problème étant : le projet étant public, github supprime les token q
 
 Il suffit pour cela d'effectuer dans le repertoire .git local les commande suivantes :
 
-$ gem install travis
-$ travis encrypt SOMEVAR="secretvalue" --add
+  $ gem install travis
+  $ travis encrypt SOMEVAR="secretvalue" --add
 
 Puis de pousser les modifications sur github.
         
