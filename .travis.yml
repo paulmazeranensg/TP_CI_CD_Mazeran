@@ -19,7 +19,8 @@ jobs:
     - stage: Construire
       name: "Build"
       script: mvn package
-      script: mvn site
+      script: 
+      - mvn site
       - git checkout -b gh-pages
       - git add . 
       - git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
