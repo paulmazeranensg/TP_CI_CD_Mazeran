@@ -1,13 +1,11 @@
 # Evaluation des compétences CI/CD
 
 L’objet de ce travail pratique est de mettre en oeuvre de la livraison continue (“CD”) sur le projet suivant : 
-https://github.com/dropwizard/dropwizard/tree/master/dropwizard-example
+https://github.com/dropwizard/dropwizard/tree/master/dropwizard-example.
 
-# Overview
+# Outil d'IC : Travic IC
 
-Included with this application is an example of the optional DB API module. The examples provided illustrate a few of
-the features available in [Hibernate](http://hibernate.org/), along with demonstrating how these are used from within
-Dropwizard.
+Pour mon projet, j'ai choisi d'utilisé le système d'integration continue libre le plus utilisé et ai donc choisi "Travis IC"
 
 This database example is comprised of the following classes:
 
