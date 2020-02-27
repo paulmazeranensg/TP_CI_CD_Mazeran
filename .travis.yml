@@ -4,6 +4,7 @@ jdk:
   - openjdk13
 before_install:
     - chmod +x src/test/java/com/example/helloworld
+    - chmod +x push.sh
     - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
     - rm ~/.m2/settings.xml || true
     - ulimit -c unlimited -S
