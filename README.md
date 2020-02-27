@@ -13,17 +13,11 @@ Comme demandé dans le sujet, le pipeline est composé des étapes : Construire,
 
 * Construire : cette étage effectue la ligne de commande "mvn package" et génère une documentation de type maven site. Cette documentation est poussée sur la branche master. La stratégie utilisée pour le maven site est expliquée plus plus bas.
 
-* Test : des tests d'integrations sont executés en parallèle 
+* Test : des tests d'integrations sont executés en parallèles sur deux versions je java : jdk8 et jdk13.
 
-* All the JPQL statements for use in the `PersonDAO` are located in the `Person` class.
+* Deployer : cette étape effectue ligne de commande "mvn deploy".
 
-* `migrations.xml` illustrates the usage of `dropwizard-migrations` which can create your database prior to running
-your application for the first time.
 
-* The `PersonResource` and `PeopleResource` are the REST resource which use the PersonDAO to retrieve data from the database, note the injection
-of the PersonDAO in their constructors.
-
-As with all the modules the db example is wired up in the `initialize` function of the `HelloWorldApplication`.
 
 # La documentation 
 
