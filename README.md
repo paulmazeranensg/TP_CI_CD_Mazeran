@@ -7,7 +7,7 @@ https://github.com/dropwizard/dropwizard/tree/master/dropwizard-example.
 
 Pour mon projet, j'ai choisi d'utilisé le système d'integration continue libre le plus utilisé et ai donc choisi "Travis IC"
 
-This database example is comprised of the following classes:
+# Le pipeline
 
 * The `PersonDAO` illustrates using the Data Access Object pattern with assisting of Hibernate.
 
@@ -23,30 +23,9 @@ of the PersonDAO in their constructors.
 
 As with all the modules the db example is wired up in the `initialize` function of the `HelloWorldApplication`.
 
-# Running The Application
+# La documentation 
 
-To test the example application run the following commands.
 
-* To create the example, package the application using [Apache Maven](https://maven.apache.org/) from the root dropwizard directory.
 
-        cd dropwizard
-        ./mvnw package
-        cd dropwizard-example
 
-* To setup the h2 database run.
-
-        java -jar target/dropwizard-example-$DW_VERSION.jar db migrate example.yml
-
-* To run the server run.
-
-        java -jar target/dropwizard-example-$DW_VERSION.jar server example.yml
-
-* To hit the Hello World example (hit refresh a few times).
-
-	http://localhost:8080/hello-world
-
-* To post data into the application.
-
-	curl -H "Content-Type: application/json" -X POST -d '{"fullName":"Other Person","jobTitle":"Other Title"}' http://localhost:8080/people
-	
-	open http://localhost:8080/people
+        java -jar target/dropwizard-example-$DW_VERSION.jar server exampl
