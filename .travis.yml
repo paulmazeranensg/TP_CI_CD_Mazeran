@@ -9,7 +9,7 @@ before_install:
     - ulimit -c unlimited -S
 stages:
   - Construire
-  - Tests
+  - test
   - Deployer
 jobs:
   include:
