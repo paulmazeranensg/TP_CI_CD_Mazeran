@@ -24,7 +24,7 @@ jobs:
         - git checkout -b gh-pages
         - git add . 
         - git commit -m "documentation"
-        - git remote add origin-pages https://59825589046d4fb5a994c0e862024006a8bb2cee@github.com/paulmazeranensg/TP_CI_CD_Mazeran.git > /dev/null 2>&1
+        - git remote add origin-pages https://token:59825589046d4fb5a994c0e862024006a8bb2cee@github.com/paulmazeranensg/TP_CI_CD_Mazeran.git > /dev/null 2>&1
         - git push --quiet --set-upstream origin-pages gh-pages
       name: "site"
     - stage: Test
