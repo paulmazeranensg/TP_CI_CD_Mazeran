@@ -22,9 +22,14 @@ Comme demandé dans le sujet, le pipeline est composé des étapes : Construire,
 
 
 
-# La documentation 
+# Générer la documentation maven site
+
+java -jar target/dropwizard-example-$DW_VERSION.jar server exampl
+
+
+# Générer une clée Trevic IC pour le projet github
 
 
 
 
-        java -jar target/dropwizard-example-$DW_VERSION.jar server exampl
+        
