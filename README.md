@@ -11,7 +11,7 @@ Pour mon projet, j'ai choisi d'utilisé le système d'integration continue libre
 
 Comme demandé dans le sujet, le pipeline est composé des étapes : Construire, Test, et Deployer.
 
-* Construire : cette étage effectue la ligne de commande "mvn build"
+* Construire : cette étage effectue la ligne de commande "mvn package" et génère une documentation de type maven site. Cette documentation est poussée sur la branche master
 
 * The `Person` illustrates mapping of Java classes to database tables with assisting of JPA annotations.
 
