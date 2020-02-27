@@ -14,9 +14,17 @@ stages:
 jobs:
   include:
     - stage: Construire
+       before_script:
+        - git remote set-url origin https://token1:343e1e2308a460383983b48a6fea8793b735f084@gitlab.com/$CI_PROJECT_PATH.git
+        - git config --global user.email 'mazeran.paul@gmail.com’
+        - git config --global user.name ‘paulmazeranensg’
       script: mvn package
       name: "Build"
     - script: mvn site
+    - script: git add --all
+    - script: git commit -m ‘[skip ci] commit from CI runner’
+    - script: git show-ref
+    - script: git push origin HEAD:$CI_COMMIT_BRANCH
       name: "site"
     - stage: Test
       jdk: openjdk8
