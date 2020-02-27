@@ -7,7 +7,7 @@ https://github.com/dropwizard/dropwizard/tree/master/dropwizard-example.
 
 Pour mon projet, j'ai choisi d'utilisé le système d'integration continue libre le plus utilisé et ai donc choisi "Travis IC". 
 
-# Le pipeline
+## Le pipeline
 
 Comme demandé dans le sujet, le pipeline est composé des étapes : Construire, Test, et Deployer.
 
@@ -24,14 +24,14 @@ Comme demandé dans le sujet, le pipeline est composé des étapes : Construire,
 Le pipeline est accessible via le lien suivant : https://travis-ci.org/paulmazeranensg/TP_CI_CD_Mazeran.
 
 
-# Générer la documentation maven site
+## Générer la documentation maven site
 
 Afin de générer le maven site, j'utilise la commande "mvs site". j'ai tenté de pousser les document généré par la commande sur la branche master en utilisant le code suivant : https://gist.github.com/willprice/e07efd73fb7f13f917ea.
 
 Le seule problème étant : le projet étant public, github supprime les token que je créé car leur ecriture en clair entraine des faille de sécurité.
 
 
-# Générer une clée Trevic IC pour le projet github
+## Générer une clée Trevic IC pour le projet github
 
         Afin que Travis IC ai les droits sur le projet git hub, il faut ajouter dans le fichier travis.yml une clée de sécurité.
 
