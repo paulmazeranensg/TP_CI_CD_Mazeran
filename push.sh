@@ -6,13 +6,14 @@ setup_git() {
 }
 
 commit_website_files() {
+  git checkout -b gh-pages
   git add . *.html
   git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 }
 
 upload_files() {
   git remote add origin-pages https://${59825589046d4fb5a994c0e862024006a8bb2cee}@github.com/paulmazeranensg/TP_CI_CD_Mazeran.git > /dev/null 2>&1
-  git push --quiet --set-upstream origin-pages master 
+  git push --quiet --set-upstream origin-pages gh-pages 
 }
 
 setup_git
