@@ -1,5 +1,6 @@
 language : java
 jdk:
+  -stage : Tests
   - openjdk8
   - openjdk13
 before_install:
@@ -19,8 +20,13 @@ jobs:
     - script: mvn site
       name: "site"
     - stage: Tests
+      image: maven:3-jdk-8
       script: mvn test
-      name: "Integration Tests" 
+      name: "Integration Tests jdk8" 
+    - stage: Tests
+      image: maven:3-jdk-13
+      script: mvn test
+      name: "Integration Tests jdk13" 
     - stage: Deployer
       script: mvn deploy
       name: "Deploy"         
