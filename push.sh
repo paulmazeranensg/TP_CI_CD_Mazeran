@@ -11,7 +11,7 @@ commit_website_files() {
 }
 
 upload_files() {
-  git remote add origin-pages https://${59825589046d4fb5a994c0e862024006a8bb2cee}@github.com/MVSE-outreach/resources.git > /dev/null 2>&1
+  git remote add origin-pages https://${59825589046d4fb5a994c0e862024006a8bb2cee}@github.com/paulmazeranensg/TP_CI_CD_Mazeran.git > /dev/null 2>&1
   git push --quiet --set-upstream origin-pages master 
 }
 
