@@ -33,6 +33,10 @@ Le seule problème étant : le projet étant public, github supprime les token q
 
 Afin que Travis IC ai les droits sur le projet git hub, il faut ajouter dans le fichier travis.yml une clée de sécurité.
 
+Il suffit pour cela d'effectuer dans le repertoire .git local les commande suivantes :
 
+$ gem install travis
+$ travis encrypt SOMEVAR="secretvalue" --add
 
+Puis de pousser les modifications sur github.
         
